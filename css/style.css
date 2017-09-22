@@ -1,0 +1,91 @@
+body {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-top: 5%;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    color:
+}
+
+#screen {
+    height: 2.4em;
+    text-align: right;
+    background-color: #202020;
+    color: white;
+    font-size: 2.8em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.container {
+    margin-top: 5%;
+    width: 24%;
+    padding: 0;
+}
+
+.col-md-6,
+.col-md-3 {
+    padding: 0;
+    text-align: center;
+    height: 5em;
+}
+
+.btn {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    font-size: 2.8em;
+    font-family: 'Montserrat', sans-serif;
+    border-color: DimGrey;
+}
+
+.btn-default {
+    background-color: Gainsboro;
+}
+
+#equals,
+#add,
+#subtract,
+#multiply,
+#divide {
+    background-color: #F58010;
+}
+
+#clear,
+#modulo,
+#seven,
+#four,
+#one,
+#eight,
+#five,
+#two,
+#nine,
+#six,
+#three {
+    border-right: none;
+    border-bottom: none;
+}
+
+#divide,
+#multiply,
+#subtract,
+#add {
+    border-bottom: none;
+}
+
+#zero,
+#decimal {
+    border-right: none;
+}
+
+@media only screen and (max-width: 400px) {
+    .container {
+        width: 100%;
+    }
+}

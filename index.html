@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+
+    <title>JS Calculator</title>
+
+    <!-- jQuery -->
+
+    <script
+              src="https://code.jquery.com/jquery-3.2.1.js"
+              integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+              crossorigin="anonymous"></script>
+
+    <!-- Bootstrap -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Google font -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+    <!-- CSS -->
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <div class="row">
+        <h1>JavaScript Calculator</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="screen">
+
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 col-xs-6">
+                <input class="btn btn-default" type="button" id="clear" value="C">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="modulo" value="&#37;">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="divide" value="&#247;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3  col-xs-3">
+                <input class="btn btn-default" type="button" id="seven" value="7">
+            </div>
+            <div class="col-md-3  col-xs-3">
+                <input class="btn btn-default" type="button" id="eight" value="8">
+            </div>
+            <div class="col-md-3  col-xs-3">
+                <input class="btn btn-default" type="button" id="nine" value="9">
+            </div>
+            <div class="col-md-3  col-xs-3">
+                <input class="btn btn-default" type="button" id="multiply" value="&#215;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="four" value="4">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="five" value="5">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="six" value="6">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="subtract" value="&#8722;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="one" value="1">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="two" value="2">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="three" value="3">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="add" value="&#43;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6  col-xs-6">
+                <input class="btn btn-default" type="button" id="zero" value="0">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="decimal" value=".">
+            </div>
+            <div class="col-md-3 col-xs-3">
+                <input class="btn btn-default" type="button" id="equals" value="&#61;">
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+
+        var calc = $("#screen").val();
+
+        $("#clear").click(function() {
+            $("#screen").html(calc = "");
+        });
+
+        // numbers
+
+        $("#seven").click(function() {
+            $("#screen").html(calc += 7);
+        });
+
+        $("#eight").click(function() {
+            $("#screen").html(calc += 8);
+        });
+
+        $("#nine").click(function() {
+            $("#screen").html(calc += 9);
+        });
+
+        $("#four").click(function() {
+            $("#screen").html(calc += 4);
+        });
+
+        $("#five").click(function() {
+            $("#screen").html(calc += 5);
+        });
+
+        $("#six").click(function() {
+            $("#screen").html(calc += 6);
+        });
+
+        $("#one").click(function() {
+            $("#screen").html(calc += 1);
+        });
+
+        $("#two").click(function() {
+            $("#screen").html(calc += 2);
+        });
+
+        $("#three").click(function() {
+            $("#screen").html(calc += 3);
+        });
+
+        $("#zero").click(function() {
+            $("#screen").html(calc += 0);
+        });
+
+        // symbols
+
+        $("#modulo").click(function() {
+            $("#screen").html(calc += "%");
+        });
+
+        $("#divide").click(function() {
+            $("#screen").html(calc += "/");
+        });
+
+        $("#multiply").click(function() {
+            $("#screen").html(calc += "*");
+        });
+
+        $("#subtract").click(function() {
+            $("#screen").html(calc += "-");
+        });
+
+        $("#add").click(function() {
+            $("#screen").html(calc += "+");
+        });
+
+        $("#decimal").click(function() {
+            $("#screen").html(calc += ".");
+        });
+
+        // equals
+
+        $("#equals").click(function() {
+            $("#screen").html(calc = eval(calc));
+        });
+
+    </script>
+</body>
+</html>
